@@ -37,7 +37,18 @@ namespace vize_odevi_NTP
 
             XmlNodeList nodes = root.SelectNodes("altin");
 
+            foreach (XmlNode node in nodes)
+            {
+                string adi = node["adi"].InnerText;
+                string al = node["al"].InnerText;
+                string sat = node["sat"].InnerText;
 
+                dataGridView1 row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                row.Cells[0].value = adi;
+                row.Cells[1].value = al;
+                row.Cells[2.value = sat;
+                dataGridView1.Rows.Add(row);
+            }
         
         }
     }
