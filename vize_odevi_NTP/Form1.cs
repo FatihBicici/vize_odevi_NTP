@@ -43,10 +43,10 @@ namespace vize_odevi_NTP
                 string al = node["al"].InnerText;
                 string sat = node["sat"].InnerText;
 
-                dataGridView1 row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-                row.Cells[0].value = adi;
-                row.Cells[1].value = al;
-                row.Cells[2.value = sat;
+                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                row.Cells[0].Value = adi;
+                row.Cells[1].Value = al;
+                row.Cells[2].Value = sat;
                 dataGridView1.Rows.Add(row);
             }
         
