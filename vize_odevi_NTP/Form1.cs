@@ -7,10 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 namespace vize_odevi_NTP
+
 {
     public partial class Form1 : Form
     {
+        string altin_link = "http://www.kulcealtin.com/altinxml/";
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +31,14 @@ namespace vize_odevi_NTP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            XmlDocument doc1 = new XmlDocument();
+            doc1.Load(altin_link);
+            XmlElement root = doc1.DocumentElement;
 
+            XmlNodeList nodes = root.SelectNodes("altin");
+
+
+        
         }
     }
 }
