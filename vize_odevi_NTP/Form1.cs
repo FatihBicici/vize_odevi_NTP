@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.IO;
 namespace vize_odevi_NTP
 
 {
@@ -50,6 +51,22 @@ namespace vize_odevi_NTP
                 dataGridView1.Rows.Add(row);
             }
         
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            TextWriter writer = new StreamWriter(@"C:\Users\Bycymon\Desktop/xml.txt");
+
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    writer.Write("" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t");
+                }
+
+            }
+            
         }
     }
 }
