@@ -62,11 +62,13 @@ namespace vize_odevi_NTP
             {
                 for (int j = 0; j < dataGridView1.Columns.Count; j++)
                 {
-                    writer.Write("" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t");
+                    writer.Write("" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
                 }
-
+                writer.WriteLine("");
+                writer.WriteLine("------------------------------------------------");
             }
-            
+            writer.Close();
+            MessageBox.Show("Txt Kaydedildi");
         }
     }
 }
