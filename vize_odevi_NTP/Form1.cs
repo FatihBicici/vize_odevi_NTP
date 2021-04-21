@@ -68,16 +68,13 @@ namespace vize_odevi_NTP
                 writer.WriteLine("------------------------------------------------");
             }
             writer.Close();
-            MessageBox.Show("Txt Kaydedildi");
+            MessageBox.Show("Txt");
+            MessageBox.Show("Veri Güncellenme Tarihi" + DateTime.Now.ToLongDateString());
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            long time = Convert.ToInt64(al);
-            DateTime date1 = new DateTime(time);
-            DateTime date2 = DateTime.Now;
-            TimeSpan ts = date2 - date1;
-            Label.text = Convert.ToString(ts);
+           
         }
     }
 }
