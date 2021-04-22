@@ -29,7 +29,7 @@ namespace vize_odevi_NTP
         {
 
         }
-        string al;
+        
         private void button1_Click(object sender, EventArgs e)
         {
             XmlDocument doc1 = new XmlDocument();
@@ -41,20 +41,16 @@ namespace vize_odevi_NTP
             foreach (XmlNode node in nodes)
             {
                 string adi = node["adi"].InnerText;
-                string al = node["al"].InnerText;
-                string sat = node["sat"].InnerText;
+                string al = node["sat"].InnerText;
+                string sat = node["al"].InnerText;
 
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
                 row.Cells[0].Value = adi;
-                row.Cells[1].Value = al;
-                row.Cells[2].Value = sat;
+                row.Cells[1].Value = sat;
+                row.Cells[2].Value = al;
                 dataGridView1.Rows.Add(row);
             }
-        
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
 
             TextWriter writer = new StreamWriter(@"C:\Users\Bycymon\Desktop/xml.txt");
 
@@ -68,13 +64,27 @@ namespace vize_odevi_NTP
                 writer.WriteLine("------------------------------------------------");
             }
             writer.Close();
-            MessageBox.Show("Txt");
-            MessageBox.Show("Veri Güncellenme Tarihi" + DateTime.Now.ToLongDateString());
+            MessageBox.Show("Txt Kaydedildi..");
+            
+
+
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Veri Güncellenme Tarihi  " + DateTime.Now.ToLongDateString());
         }
     }
 }
