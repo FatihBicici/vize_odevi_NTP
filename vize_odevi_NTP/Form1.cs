@@ -29,7 +29,7 @@ namespace vize_odevi_NTP
         {
 
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             XmlDocument doc1 = new XmlDocument();
@@ -65,7 +65,7 @@ namespace vize_odevi_NTP
             }
             writer.Close();
             MessageBox.Show("Txt Kaydedildi..");
-            
+
 
 
 
@@ -79,12 +79,28 @@ namespace vize_odevi_NTP
 
         private void label1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Veri Güncellenme Tarihi  " + DateTime.Now.ToLongDateString());
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult cikis;
+            cikis = MessageBox.Show("Program Kapatılacak Eminmisiniz ?", "Kapatma Uyarısı!", MessageBoxButtons.YesNo);
+            if (cikis == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            if (cikis == DialogResult.No)
+            {
+                Application.Run();
+            }
+        }
+
+       
     }
 }
