@@ -35,6 +35,7 @@ namespace vize_odevi_NTP
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,9 +47,9 @@ namespace vize_odevi_NTP
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 1);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 46);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(650, 231);
+            this.dataGridView1.Size = new System.Drawing.Size(650, 210);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -75,7 +76,7 @@ namespace vize_odevi_NTP
             this.button1.BackgroundImage = global::vize_odevi_NTP.Properties.Resources._20121011142536_29be2dd8_me;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.button1.Location = new System.Drawing.Point(0, 238);
+            this.button1.Location = new System.Drawing.Point(0, 262);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(309, 88);
             this.button1.TabIndex = 1;
@@ -88,7 +89,7 @@ namespace vize_odevi_NTP
             this.button2.BackgroundImage = global::vize_odevi_NTP.Properties.Resources._20121011142536_29be2dd8_me;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(325, 239);
+            this.button2.Location = new System.Drawing.Point(325, 262);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(325, 88);
             this.button2.TabIndex = 2;
@@ -96,11 +97,25 @@ namespace vize_odevi_NTP
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(259, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 24);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "CANLI DÖVİZ";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 325);
+            this.ClientSize = new System.Drawing.Size(652, 358);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -110,6 +125,7 @@ namespace vize_odevi_NTP
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -121,6 +137,7 @@ namespace vize_odevi_NTP
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label label1;
     }
 }
 
